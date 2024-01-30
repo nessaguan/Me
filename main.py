@@ -65,11 +65,11 @@ def main():
         col3.download_button(label="Download my Resume", data=file, file_name="resume.pdf", mime="application/pdf")
 
     # Input area for user to ask questions
-    message = st.text_area("Hi, I am ABC. What would you like to know about me.")
+    message = st.text_area("Hi, I am Vanessa Guan. What would you like to know about me.")
 
     # Process and display the response
     if message:
-        st.write("Typing...")
+        st.write("Thinking...")
         result = generate_response(message)
         st.info(result)
 
