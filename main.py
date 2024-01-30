@@ -31,10 +31,10 @@ def retrieve_info(query):
     return page_contents_array
 
 # Initialize the ChatOpenAI model with specific settings
-llm = ChatOpenAI(temperature=0, model="gpt-4-1106-preview")
+llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-1106")
 
 # Define a template for the chatbot's responses
-template = """Add 2+2"""
+template = """given the {relevant_data}, answer as if you were Vanessa Guan to {question} keep it to three sentences"""
 
 # Create a PromptTemplate object with the defined template
 prompt = PromptTemplate(
@@ -55,7 +55,7 @@ def generate_response(question):
 def main():
     # Set up the Streamlit page configuration and customize it
     st.set_page_config(
-        page_title="Get to know me", page_icon=":male-technologist:")
+        page_title="Get to know me", page_icon=":female-technologist:")
 
     # Streamlit UI layout with columns
     col1, col2, col3 = st.columns([1, 2, 1])
